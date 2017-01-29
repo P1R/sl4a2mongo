@@ -3,7 +3,7 @@ from config import DbData as DbD
 from pymongo import MongoClient
 from datetime import datetime
 
-client = MongoClient("mongodb://{}:{}".format(DbD['host'],DbD['password']))
+client = MongoClient("mongodb://{}:{}".format(DbD['host'],DbD['port']))
 db = client.test
 
 result = db.restaurants.insert_one(
