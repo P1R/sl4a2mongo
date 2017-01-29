@@ -1,8 +1,9 @@
 #!/usr/bin/env python2.7
+from config import DbData as DbD
 from pymongo import MongoClient
 from datetime import datetime
 
-client = MongoClient("mongodb://localhost:27017")
+client = MongoClient("mongodb://{}:{}".format(DbD['host'],DbD['password']))
 db = client.test
 
 result = db.restaurants.insert_one(
