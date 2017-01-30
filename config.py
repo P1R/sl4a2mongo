@@ -1,5 +1,5 @@
 '''Conection data for mongo'''
 DbData={'user': 'someuser',
         'password': 'somepasswd',
-        'host': 'localhost',
+        'host': 'nethunters.xyz',
 'port': 27017}
