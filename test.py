@@ -1,4 +1,4 @@
-#!/usr/bin/env python2.7
+#!/usr/bin/env pyton2.7
 from config import DbData as DbD
 from pymongo import MongoClient
 from datetime import datetime
@@ -6,7 +6,7 @@ from datetime import datetime
 client = MongoClient("mongodb://{}:{}".format(DbD['host'],DbD['port']))
 db = client.test
 
-result = db.restaurants.insert_one(
+result = db.sensors.insert_one(
     {
         "address": {
             "street": "2 Avenue",

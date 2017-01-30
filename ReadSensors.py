@@ -1,4 +1,5 @@
 import subprocess
+from ast import literal_eval as leval
 
 def gps():
     cmd = ['termux-location']
@@ -6,8 +7,8 @@ def gps():
             stdout=subprocess.PIPE)
     text = p.stdout.read().decode("UTF-8")
     #retcode = p.wait()
-    return f'{{"gps": {text} }}' #, retcode
+    return leval(f'{{"gps": {text} }}') #, retcode
 
 #text, ret = gps()
-print(eval(gps()))
+print(gps())
 #print(ret)
